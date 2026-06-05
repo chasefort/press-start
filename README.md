@@ -2,13 +2,29 @@
 
 # Press Start
 
-Guided first-run onboarding for [Andrej Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), made for complete beginners.
+**Guided first-run onboarding for [Andrej Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), made for complete beginners.**
 
-Press Start does not replace or redesign LLM Wiki. It helps people move from ChatGPT or Claude in a web browser to a file-working agent like Codex or Claude Code, install the proven Karpathy-style setup, collect useful context from the AI tools and documents they already use, confirm what is accurate, answer targeted follow-up questions, and bootstrap the first useful wiki pages.
+Press Start is a one-time setup skill. It helps someone move from ChatGPT or Claude in a browser to a file-working agent like Codex or Claude Code, install the proven Karpathy-style LLM Wiki pattern, collect useful context from existing AI chats and documents, answer targeted follow-up questions, and bootstrap the first useful wiki pages.
 
 No AI background is assumed.
 
-Press Start is meant to be run once. After the wiki is set up, the assistant should offer to remove or disable Press Start so future sessions use the LLM Wiki directly.
+Press Start does **not** replace or redesign LLM Wiki. Karpathy's LLM Wiki is the backbone. Press Start is the beginner-friendly setup guide.
+
+## Why This Exists
+
+Most people start with AI in a web chat box. That works, but it means they keep re-explaining the same context: who they are, what they are working on, what they want, what matters, what they dislike, and what has already been decided.
+
+LLM Wiki solves that by putting durable context into local markdown files an agent can read and maintain.
+
+Press Start makes the first setup easy enough for a beginner:
+
+1. Explain the move from web chat to a file-working agent.
+2. Set up the Karpathy-style LLM Wiki structure.
+3. Collect context from ChatGPT, Claude, Gemini, Perplexity, documents, notes, and project files.
+4. Confirm what is accurate, stale, private, or missing.
+5. Ask targeted questions based on the user's actual use case.
+6. Build the starter wiki.
+7. Offer to remove or disable itself once setup is complete.
 
 ## What It Does
 
@@ -23,16 +39,53 @@ Press Start is meant to be run once. After the wiki is set up, the assistant sho
 - Creates the initial wiki pages, index, and bootstrap log entry.
 - Offers to remove or disable itself after setup is complete.
 
-## Skill Files
+## Who It Is For
+
+Press Start is for people who:
+
+- use ChatGPT, Claude, Gemini, or Perplexity in a browser
+- want AI to remember more useful context
+- are new to Codex, Claude Code, Terminal, GitHub, markdown, or local files
+- want a guided setup instead of a technical explanation
+- are helping a friend, client, teammate, or family member set up an LLM Wiki
+
+It works for broad use cases, including career planning, current job workflows, school, personal organization, business/freelancing, creative projects, research, coding, meetings, and document-heavy work.
+
+## How It Works
+
+Press Start uses a **collect -> confirm -> construct** flow.
+
+### 1. Collect
+
+The skill gives the user copy-paste prompts for the tools they already use, such as ChatGPT, Claude, Gemini, Perplexity, Codex, Claude Code, Cursor, Notion, Google Docs, or Obsidian.
+
+The user pastes the results back into the setup chat or adds files to `raw/`.
+
+### 2. Confirm
+
+The skill reviews the material and reports:
+
+- what is strong enough to turn into wiki pages
+- what is missing
+- what seems stale
+- what may be sensitive
+- what contradicts other sources
+
+The user confirms what should be kept, excluded, or summarized more privately.
+
+### 3. Construct
+
+The skill creates the starter LLM Wiki structure and initial pages, then shows a practical "wow test" task that demonstrates why this is better than normal web chat.
+
+## Repository Contents
 
 ```text
-press-start/
-  SKILL.md
-  README.md
-  agents/openai.yaml
-  references/interview-map.md
-  references/context-export-prompts.md
-  assets/readme-banner/
+README.md
+SKILL.md
+agents/openai.yaml
+references/interview-map.md
+references/context-export-prompts.md
+assets/readme-banner/
 ```
 
 ## If You Are Brand New
@@ -73,6 +126,15 @@ Useful official setup links:
 
 ## Positioning
 
-Karpathy's LLM Wiki is the backbone.
+Press Start is intentionally narrow.
 
-Press Start is the setup guide: collect, confirm, construct.
+- It is not a new wiki architecture.
+- It is not a replacement for Karpathy's LLM Wiki.
+- It is not an ongoing daily workflow skill.
+- It is setup scaffolding.
+
+Once the user's wiki is ready, Press Start should offer to remove or disable itself so future agents use the LLM Wiki directly.
+
+## License
+
+MIT
