@@ -1,0 +1,8 @@
+interface:
+  display_name: "Press Start"
+  short_description: "Guided setup for Karpathy-style LLM Wiki"
+  default_prompt: "Use $press-start to install a Karpathy-style LLM Wiki and guide me through first-run context intake."
+  brand_color: "#2563EB"
+
+policy:
+  allow_implicit_invocation: true
