@@ -88,7 +88,26 @@ If installation gets confusing or fails, stop and ask the user to paste the exac
 
 Start here every time unless the current repo already has a working LLM Wiki.
 
-1. Ask the user where they want the wiki created. For beginners, phrase this as: "Where should this memory folder live? Desktop is fine if you are not sure."
+1. Explain that the LLM Wiki needs its own folder on the user's computer:
+
+```text
+We need to make one folder for your LLM Wiki. Think of this as your AI memory folder. It will hold the original material you give the assistant and the cleaner wiki pages the assistant creates from it.
+```
+
+Then ask where to create it:
+
+```text
+Where do you want this folder to live?
+
+If you are not sure, I recommend your Desktop because it is easy to find. We can make a folder there called `llm-wiki`.
+```
+
+Do not choose a location without the user's answer. If they are unsure, suggest:
+
+```text
+Desktop -> llm-wiki
+```
+
 2. Direct them to the canonical LLM Wiki idea file:
    https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 3. Explain that this link is the original idea and pattern Press Start is using. The user does not need to understand the whole document before continuing.

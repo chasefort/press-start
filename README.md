@@ -31,6 +31,7 @@ Press Start makes the first setup easy enough for a beginner:
 - Points users to the canonical LLM Wiki source first.
 - Explains the difference between web chat and a file-working agent in plain language.
 - Walks beginners toward Codex or Claude Code one step at a time.
+- Asks where the user wants the wiki folder created and suggests Desktop as the easiest default.
 - Verifies or creates the standard `raw/` and `wiki/` structure.
 - Gives copy-paste prompts for ChatGPT, Claude, Gemini, Perplexity, and coding agents.
 - Helps users paste messy context back into the setup chat.
