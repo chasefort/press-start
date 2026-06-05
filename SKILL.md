@@ -1,6 +1,6 @@
 ---
 name: press-start
-description: Guided first-run onboarding for Karpathy-style LLM Wiki, especially for complete beginners moving from ChatGPT or Claude web chat to Codex, Claude Code, or another file-working agent. Use when a user wants to install or bootstrap Andrej Karpathy's LLM Wiki pattern, collect existing AI context and documents, verify what is accurate, ask targeted follow-up questions, and create the initial raw and wiki structure without changing the LLM Wiki architecture.
+description: Guided onboarding for Karpathy-style LLM Wiki, especially for complete beginners who want to set up a new wiki or improve an existing one. Use when a user wants to install, bootstrap, audit, or enhance Andrej Karpathy's LLM Wiki pattern, collect existing AI context and documents, run a deep customized interview, verify what is accurate, and create or improve raw and wiki structure without changing the LLM Wiki architecture.
 metadata:
   short-description: Guided setup for Karpathy-style LLM Wiki
 ---
@@ -12,12 +12,12 @@ Press Start is a guided setup layer for Andrej Karpathy's LLM Wiki pattern.
 The canonical LLM Wiki source is:
 https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 
-Do not reinvent, replace, rename, or redesign the LLM Wiki architecture. First help the user install or apply the canonical LLM Wiki pattern, then guide them through collecting context, confirming it, filling gaps, and bootstrapping the initial wiki.
+Do not reinvent, replace, rename, or redesign the LLM Wiki architecture. First detect whether the user already has a Karpathy-style LLM Wiki. If they do, improve it through a deep onboarding interview and gap audit. If they do not, help them install or apply the canonical pattern, then guide them through collecting context, confirming it, filling gaps, and bootstrapping the initial wiki.
 
 ## Operating stance
 
 - Treat Karpathy's LLM Wiki as the backbone.
-- Treat Press Start as a one-time setup assistant, not an ongoing workflow skill.
+- Treat Press Start as onboarding scaffolding, not an ongoing daily workflow skill. It can be used once to set up a wiki or once to deeply improve an existing thin wiki.
 - Preserve the raw-to-wiki model: raw sources are immutable inputs; wiki pages are synthesized, maintained knowledge.
 - Assume the user is a complete beginner unless they clearly show otherwise.
 - Keep the setup accessible for people who only know ChatGPT or Claude in a web browser.
@@ -41,11 +41,12 @@ You do not need to understand how AI works to do this.
 ChatGPT or Claude in the browser is mostly a chat window. The assistant you are using now can work with files on your computer. That matters because an LLM Wiki is just a folder of text files that the assistant can read and update over time.
 
 We are going to:
-1. Make one AI memory folder.
-2. Set up the proven Karpathy LLM Wiki structure inside it.
-3. Collect context you already have from ChatGPT, Claude, documents, and notes.
-4. Ask only the missing questions.
-5. Turn it into a useful starter wiki.
+1. Check whether you already have an LLM Wiki.
+2. If you do, improve it. If you do not, make one AI memory folder.
+3. Use the proven Karpathy LLM Wiki structure.
+4. Collect context you already have from ChatGPT, Claude, documents, and notes.
+5. Ask deep questions based on what is missing or unclear.
+6. Turn the wiki into something future assistants can actually use.
 
 I will go one step at a time.
 ```
@@ -54,9 +55,28 @@ Do not ask the user to choose between Codex and Claude Code. If Press Start is r
 
 If the user asks how to install Codex or Claude Code, then point them to official docs. Otherwise, do not make tool installation part of the active setup.
 
-## Phase 1: Install the LLM Wiki foundation
+## Phase 1: Detect or create the LLM Wiki foundation
 
-Start here every time unless the current repo already has a working LLM Wiki.
+Start by checking whether the current folder already has a Karpathy-style LLM Wiki.
+
+Look for:
+
+- `raw/`
+- `wiki/`
+- `wiki/index.md`
+- `wiki/log.md`
+- section folders such as `wiki/entities/`, `wiki/concepts/`, `wiki/decisions/`, `wiki/sources/`, `wiki/syntheses/`, or `wiki/projects/`
+- repo agent instructions such as `AGENTS.md` or `CLAUDE.md`
+
+If an LLM Wiki already exists, do not create a duplicate. Tell the user:
+
+```text
+I found an existing LLM Wiki. I am going to treat Press Start as an upgrade pass: I will read what is already here, find what is thin or outdated, run the deep interview, and improve the existing wiki instead of starting over.
+```
+
+Then skip folder creation and move to the existing-wiki audit below.
+
+If no LLM Wiki exists, create one.
 
 1. Explain that the LLM Wiki needs its own folder on the user's computer:
 
@@ -109,7 +129,40 @@ Explain the structure in beginner language:
 
 7. Create or update the repo's agent instructions only as needed so future agents understand the LLM Wiki workflow. Use the host agent's convention when obvious, such as `AGENTS.md` for Codex or `CLAUDE.md` for Claude Code.
 
-If the user says they have already installed LLM Wiki, verify the folder structure and instructions before continuing.
+### Existing-wiki audit
+
+When a wiki already exists, inspect it before asking questions.
+
+Read:
+
+- `wiki/index.md`
+- `wiki/log.md`
+- relevant section indexes if present
+- the most important profile, project, concept, decision, source, and synthesis pages
+- repo agent instructions such as `AGENTS.md` or `CLAUDE.md`
+
+Identify:
+
+- pages that are strong and should be preserved
+- pages that are thin, stale, contradictory, or missing sources
+- important use cases not represented in the wiki
+- active projects or priorities that are unclear
+- personal/work preferences that are missing
+- places where future agents would still lack enough context
+
+Present a short upgrade report:
+
+```text
+Your wiki already has useful context for:
+- ...
+
+The biggest gaps I see are:
+- ...
+
+The interview will focus on making these areas much stronger.
+```
+
+Then continue into context collection and the deep interview. The goal is to improve the existing wiki, not rebuild it from scratch.
 
 ## Phase 2: Collect existing context
 
@@ -278,10 +331,16 @@ Use the standard page categories:
 
 Create or update `wiki/index.md` as a high-level catalog with links and one-line summaries.
 
-Append the bootstrap operation to `wiki/log.md`:
+Append the setup or upgrade operation to `wiki/log.md`:
 
 ```markdown
 ## [YYYY-MM-DD] bootstrap | Press Start guided LLM Wiki setup
+```
+
+For an existing wiki, use:
+
+```markdown
+## [YYYY-MM-DD] update | Press Start guided LLM Wiki upgrade
 ```
 
 Use the actual current date.

@@ -2,9 +2,9 @@
 
 # Press Start
 
-**Guided first-run onboarding for [Andrej Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), made for complete beginners.**
+**Guided onboarding for [Andrej Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), made for complete beginners.**
 
-Press Start is a one-time setup skill. It runs inside a file-working agent like Codex or Claude Code, installs the proven Karpathy-style LLM Wiki pattern, collects useful context from existing AI chats and documents, asks targeted follow-up questions, and bootstraps the first useful wiki pages.
+Press Start is an onboarding skill. It runs inside a file-working agent like Codex or Claude Code, installs or improves the proven Karpathy-style LLM Wiki pattern, collects useful context from existing AI chats and documents, asks deep customized interview questions, and bootstraps or upgrades useful wiki pages.
 
 No AI background is assumed.
 
@@ -16,21 +16,23 @@ Most people start with AI in a web chat box. That works, but it means they keep 
 
 LLM Wiki solves that by putting durable context into local markdown files an agent can read and maintain.
 
-Press Start makes the first setup easy enough for a beginner:
+Press Start makes setup or enhancement easy enough for a beginner:
 
 1. Explain what an AI memory folder is.
-2. Ask where the user wants the folder created.
-3. Set up the Karpathy-style LLM Wiki structure.
-4. Collect context from ChatGPT, Claude, Gemini, Perplexity, documents, notes, and project files.
-5. Confirm what is accurate, stale, private, or missing.
-6. Run at least three rounds of deep, customized interview questions based on the user's actual use case.
-7. Build the starter wiki.
-8. Offer to remove or disable itself once setup is complete.
+2. Detect whether an LLM Wiki already exists.
+3. If there is no wiki, ask where the user wants the folder created.
+4. If there is a wiki, audit what is already strong, thin, stale, or missing.
+5. Collect context from ChatGPT, Claude, Gemini, Perplexity, documents, notes, and project files.
+6. Confirm what is accurate, stale, private, or missing.
+7. Run at least three rounds of deep, customized interview questions based on the user's actual use case.
+8. Build or upgrade the wiki.
+9. Offer to remove or disable itself once onboarding is complete.
 
 ## What It Does
 
 - Points users to the canonical LLM Wiki source first.
 - Explains why a local AI memory folder is different from normal web chat.
+- Detects whether an LLM Wiki already exists and upgrades it instead of creating a duplicate.
 - Asks where the user wants the wiki folder created and suggests Desktop as the easiest default.
 - Verifies or creates the standard `raw/` and `wiki/` structure.
 - Gives copy-paste prompts for ChatGPT, Claude, Gemini, Perplexity, and coding agents.
@@ -38,8 +40,8 @@ Press Start makes the first setup easy enough for a beginner:
 - Helps users paste corrected messy context back into the setup chat.
 - Finds missing, stale, sensitive, or contradictory information.
 - Asks at least three rounds of targeted interview questions instead of treating an export as enough.
-- Creates the initial wiki pages, index, and bootstrap log entry.
-- Offers to remove or disable itself after setup is complete.
+- Creates or improves wiki pages, indexes, and log entries.
+- Offers to remove or disable itself after onboarding is complete.
 
 ## Who It Is For
 
@@ -134,7 +136,7 @@ Press Start is intentionally narrow.
 - It is not an ongoing daily workflow skill.
 - It is setup scaffolding.
 
-Once the user's wiki is ready, Press Start should offer to remove or disable itself so future agents use the LLM Wiki directly.
+Once the user's wiki is ready or upgraded, Press Start should offer to remove or disable itself so future agents use the LLM Wiki directly.
 
 ## License
 

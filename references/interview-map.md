@@ -1,6 +1,6 @@
 # Interview Map
 
-Use this reference during Press Start Phases 3-5. It tells the agent what information is useful for a first LLM Wiki and how to ask questions that produce useful context.
+Use this reference during Press Start Phases 3-5. It tells the agent what information is useful for a new or existing LLM Wiki and how to ask questions that produce useful context.
 
 Do not ask this as a giant form. Use it as an audit map:
 
@@ -27,11 +27,11 @@ The first wiki is useful when a future agent can answer:
 
 If the answer to any of those is unclear, ask follow-up questions.
 
-Press Start should only run during first-time setup. After these questions are answered well enough and the first wiki is built, future sessions should use the LLM Wiki directly instead of re-running this interview.
+Press Start should run during first-time setup or during a deliberate onboarding upgrade pass for an existing thin wiki. After the wiki is strong enough, future sessions should use the LLM Wiki directly instead of re-running this interview.
 
 ## Deep Interview Requirement
 
-Press Start must run at least three customized interview rounds before building the wiki unless the user explicitly requests a shallow quickstart.
+Press Start must run at least three customized interview rounds before building or upgrading the wiki unless the user explicitly requests a shallow quickstart.
 
 Each round should include about 25 questions.
 
