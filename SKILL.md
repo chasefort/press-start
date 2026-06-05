@@ -24,13 +24,12 @@ Do not reinvent, replace, rename, or redesign the LLM Wiki architecture. First h
 - Explain every unfamiliar word before using it repeatedly: folder, file, local, terminal, command, repo, markdown, raw, wiki, Codex, Claude Code.
 - Use plain language first, then the technical term in parentheses when helpful.
 - Give one action at a time for installation and setup. Do not hand beginners a long wall of terminal commands.
-- Ask the user what computer they are on before giving install steps: Mac, Windows, or Linux.
 - Ask for messy context first; organize it after.
 - Do not ask for secrets, passwords, API keys, full addresses, account numbers, or sensitive records.
 - Before writing sensitive personal details, ask whether the user wants full detail, a private abstraction, or exclusion.
 - Confirm uncertain, stale, or conflicting claims before turning them into durable wiki pages.
 
-## Phase 0: Explain the switch from web chat to an agent
+## Phase 0: Explain what is happening
 
 Start with a short, calming explanation. Do not begin with commands.
 
@@ -39,11 +38,11 @@ Use wording like:
 ```text
 You do not need to understand how AI works to do this.
 
-ChatGPT or Claude in the browser is mostly a chat window. Codex and Claude Code are AI assistants that can also work with files on your computer. That matters because an LLM Wiki is just a folder of text files that the assistant can read and update over time.
+ChatGPT or Claude in the browser is mostly a chat window. The assistant you are using now can work with files on your computer. That matters because an LLM Wiki is just a folder of text files that the assistant can read and update over time.
 
 We are going to:
-1. Install or open an agent that can work with files.
-2. Set up the proven Karpathy LLM Wiki structure.
+1. Make one AI memory folder.
+2. Set up the proven Karpathy LLM Wiki structure inside it.
 3. Collect context you already have from ChatGPT, Claude, documents, and notes.
 4. Ask only the missing questions.
 5. Turn it into a useful starter wiki.
@@ -51,38 +50,9 @@ We are going to:
 I will go one step at a time.
 ```
 
-Then ask:
+Do not ask the user to choose between Codex and Claude Code. If Press Start is running, the user has already chosen an agent environment. The relevant question is where the wiki folder should live.
 
-```text
-What computer are you using: Mac, Windows, or Linux?
-
-And which tool do you want to use first: Codex or Claude Code? If you are unsure, tell me which accounts you already have: ChatGPT/OpenAI, Claude/Anthropic, or both.
-```
-
-If the user is unsure, recommend the tool they already have access to. Do not debate model quality with a beginner.
-
-### Beginner installation guidance
-
-Use official links and keep steps minimal.
-
-- Codex official starting point: https://developers.openai.com/codex/explore
-- Claude Code official setup docs: https://docs.anthropic.com/en/docs/claude-code/getting-started
-
-For Claude Code, the official setup docs list this standard install command:
-
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-Do not tell beginners to use `sudo` for Claude Code.
-
-If the user does not know what Terminal is, explain:
-
-```text
-Terminal is the plain text app on your computer where you can paste setup commands. On Mac it is called Terminal. On Windows, Claude Code usually needs WSL or Git Bash. If that sounds confusing, we can slow down and do only the next install step.
-```
-
-If installation gets confusing or fails, stop and ask the user to paste the exact error message. Do not keep guessing.
+If the user asks how to install Codex or Claude Code, then point them to official docs. Otherwise, do not make tool installation part of the active setup.
 
 ## Phase 1: Install the LLM Wiki foundation
 

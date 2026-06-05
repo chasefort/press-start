@@ -4,7 +4,7 @@
 
 **Guided first-run onboarding for [Andrej Karpathy's LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), made for complete beginners.**
 
-Press Start is a one-time setup skill. It helps someone move from ChatGPT or Claude in a browser to a file-working agent like Codex or Claude Code, install the proven Karpathy-style LLM Wiki pattern, collect useful context from existing AI chats and documents, answer targeted follow-up questions, and bootstrap the first useful wiki pages.
+Press Start is a one-time setup skill. It runs inside a file-working agent like Codex or Claude Code, installs the proven Karpathy-style LLM Wiki pattern, collects useful context from existing AI chats and documents, asks targeted follow-up questions, and bootstraps the first useful wiki pages.
 
 No AI background is assumed.
 
@@ -18,19 +18,19 @@ LLM Wiki solves that by putting durable context into local markdown files an age
 
 Press Start makes the first setup easy enough for a beginner:
 
-1. Explain the move from web chat to a file-working agent.
-2. Set up the Karpathy-style LLM Wiki structure.
-3. Collect context from ChatGPT, Claude, Gemini, Perplexity, documents, notes, and project files.
-4. Confirm what is accurate, stale, private, or missing.
-5. Ask targeted questions based on the user's actual use case.
-6. Build the starter wiki.
-7. Offer to remove or disable itself once setup is complete.
+1. Explain what an AI memory folder is.
+2. Ask where the user wants the folder created.
+3. Set up the Karpathy-style LLM Wiki structure.
+4. Collect context from ChatGPT, Claude, Gemini, Perplexity, documents, notes, and project files.
+5. Confirm what is accurate, stale, private, or missing.
+6. Ask targeted questions based on the user's actual use case.
+7. Build the starter wiki.
+8. Offer to remove or disable itself once setup is complete.
 
 ## What It Does
 
 - Points users to the canonical LLM Wiki source first.
-- Explains the difference between web chat and a file-working agent in plain language.
-- Walks beginners toward Codex or Claude Code one step at a time.
+- Explains why a local AI memory folder is different from normal web chat.
 - Asks where the user wants the wiki folder created and suggests Desktop as the easiest default.
 - Verifies or creates the standard `raw/` and `wiki/` structure.
 - Gives copy-paste prompts for ChatGPT, Claude, Gemini, Perplexity, and coding agents.
@@ -46,7 +46,7 @@ Press Start is for people who:
 
 - use ChatGPT, Claude, Gemini, or Perplexity in a browser
 - want AI to remember more useful context
-- are new to Codex, Claude Code, Terminal, GitHub, markdown, or local files
+- are new to Codex, Claude Code, GitHub, markdown, or local files
 - want a guided setup instead of a technical explanation
 - are helping a friend, client, teammate, or family member set up an LLM Wiki
 
@@ -96,11 +96,11 @@ You do not need to understand AI, coding, GitHub, or the command line.
 The basic idea is simple:
 
 - ChatGPT and Claude in a browser mostly talk with you.
-- Codex and Claude Code can also work with files on your computer.
+- The assistant running Press Start can work with files on your computer.
 - LLM Wiki is a folder of text files that gives those assistants memory.
 - Press Start walks you through setting that up.
 
-If someone sent you this repo, ask them to help you open Codex or Claude Code first. Then paste this:
+If someone sent you this repo, open it in the agent environment they recommended. Then paste this:
 
 ```text
 Use Press Start to help me set up a Karpathy-style LLM Wiki. I am a complete beginner, so explain everything one step at a time and do not assume I know AI, coding, Terminal, GitHub, markdown, folders, or files.
@@ -119,11 +119,6 @@ The skill will start by sending you to the canonical LLM Wiki:
 https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 
 Then it will walk you through the beginner setup process step by step.
-
-Useful official setup links:
-
-- Codex: https://developers.openai.com/codex/explore
-- Claude Code: https://docs.anthropic.com/en/docs/claude-code/getting-started
 
 ## Positioning
 
