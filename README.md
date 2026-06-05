@@ -34,7 +34,8 @@ Press Start makes the first setup easy enough for a beginner:
 - Asks where the user wants the wiki folder created and suggests Desktop as the easiest default.
 - Verifies or creates the standard `raw/` and `wiki/` structure.
 - Gives copy-paste prompts for ChatGPT, Claude, Gemini, Perplexity, and coding agents.
-- Helps users paste messy context back into the setup chat.
+- Tells users to review and correct AI exports before treating them as source material.
+- Helps users paste corrected messy context back into the setup chat.
 - Finds missing, stale, sensitive, or contradictory information.
 - Asks targeted follow-up questions instead of a generic form.
 - Creates the initial wiki pages, index, and bootstrap log entry.
@@ -61,6 +62,8 @@ Press Start uses a **collect -> confirm -> construct** flow.
 The skill gives the user copy-paste prompts for the tools they already use, such as ChatGPT, Claude, Gemini, Perplexity, Codex, Claude Code, Cursor, Notion, Google Docs, or Obsidian.
 
 The user pastes the results back into the setup chat or adds files to `raw/`.
+
+AI exports are treated as source material, not automatic truth. The user is asked to read them, correct mistakes, remove anything too private, and add missing context before the wiki is built.
 
 ### 2. Confirm
 

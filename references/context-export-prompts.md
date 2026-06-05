@@ -5,17 +5,23 @@ Use these prompts during Press Start Phase 2. Paste the relevant prompt directly
 For beginner users, wrap each prompt with plain instructions:
 
 ```text
-Open ChatGPT, paste the prompt below, then copy ChatGPT's answer and paste it back here.
+Open ChatGPT, paste the prompt below, then read ChatGPT's answer carefully. Correct anything wrong, outdated, too private, or missing. Then paste the corrected answer back here.
 ```
 
 Adjust the tool name as needed. If the user has multiple tools, give one prompt at a time so the process stays easy.
+
+Always explain:
+
+```text
+This answer becomes source material for your LLM Wiki. It is the draft source of truth the wiki will use to customize future help, so please correct it before sending it back.
+```
 
 ## ChatGPT
 
 Tell the user:
 
 ```text
-Open ChatGPT, paste the prompt below, then copy ChatGPT's answer and paste it back here.
+Open ChatGPT, paste the prompt below, then read ChatGPT's answer carefully. Correct anything wrong, outdated, too private, or missing. Then paste the corrected answer back here.
 ```
 
 Then give:
@@ -45,7 +51,7 @@ Format the result in markdown with headings and bullets.
 Tell the user:
 
 ```text
-Open Claude, paste the prompt below, then copy Claude's answer and paste it back here.
+Open Claude, paste the prompt below, then read Claude's answer carefully. Correct anything wrong, outdated, too private, or missing. Then paste the corrected answer back here.
 ```
 
 Then give:
@@ -75,7 +81,7 @@ Return clean markdown that can be saved as a raw source.
 Tell the user:
 
 ```text
-Open Gemini, paste the prompt below, then copy Gemini's answer and paste it back here.
+Open Gemini, paste the prompt below, then read Gemini's answer carefully. Correct anything wrong, outdated, too private, or missing. Then paste the corrected answer back here.
 ```
 
 Then give:
@@ -105,7 +111,7 @@ Use markdown.
 Tell the user:
 
 ```text
-Open Perplexity, paste the prompt below, then copy Perplexity's answer and paste it back here.
+Open Perplexity, paste the prompt below, then read Perplexity's answer carefully. Correct anything wrong, outdated, too private, or missing. Then paste the corrected answer back here.
 ```
 
 Then give:
@@ -129,7 +135,7 @@ Use markdown.
 Tell the user:
 
 ```text
-Open the coding agent in the repo you want included, paste the prompt below, then copy the answer and paste it back here.
+Open the coding agent in the repo you want included, paste the prompt below, then read the answer carefully. Correct anything wrong, outdated, too private, or missing. Then paste the corrected answer back here.
 ```
 
 Then give:

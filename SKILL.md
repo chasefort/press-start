@@ -123,7 +123,16 @@ For beginner users, give simple instructions:
 2. Copy the prompt I give you.
 3. Paste it there.
 4. Copy the answer it gives you.
-5. Paste that answer back here.
+5. Read the answer and correct anything wrong, outdated, too private, or missing.
+6. Paste the corrected answer back here.
+
+Explain why this matters:
+
+```text
+This export is the starting source of truth for your wiki. It is not automatically correct just because an AI wrote it. Please read it over and fix anything wrong, outdated, too private, or incomplete.
+
+The LLM Wiki will use this source material to create the memory pages that future assistants read before helping you. Better source material means better, more personal answers later.
+```
 
 If the user has multiple tools, handle one tool at a time.
 
