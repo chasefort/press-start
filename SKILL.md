@@ -156,6 +156,8 @@ Load `references/interview-map.md` and use it as the audit map. Do not ask every
 
 First identify the user's primary use case from the use-case routing section. Do not assume it is job search, coding, or AI work. If the source dump does not make the use case obvious, ask the user what they most want the wiki to help with before asking deeper questions.
 
+Do not treat AI exports as enough context by themselves. Exports are only the starting material. Press Start must run a deep interview before building the wiki unless the user explicitly asks to stop.
+
 Identify:
 
 - durable facts
@@ -202,9 +204,41 @@ Before writing durable pages, ask the user to confirm:
 
 If the user is overwhelmed, ask them to answer only the confirm/exclude items first.
 
-## Phase 5: Ask targeted follow-ups
+## Phase 5: Run the deep interview
 
-Only ask follow-up questions based on the gaps found in the source dump.
+Run at least three rounds of interview questions before building the wiki.
+
+Each round should include about 25 questions. The questions must be customized to:
+
+- the user's primary use case
+- what the source dump already says
+- what is missing, vague, stale, contradictory, or sensitive
+- what future agents would need to know to give surprisingly useful help
+- what would make the LLM Wiki feel much better than normal web chat
+
+Before the first round, tell the user:
+
+```text
+The export gave us a starting point, but it is not enough by itself. To make this wiki actually useful, I am going to ask a few rounds of deeper questions.
+
+You do not need perfect answers. If you do not know, say "I don't know." If a question does not apply, say "skip." Short answers are fine, but examples are very helpful.
+```
+
+Use this structure:
+
+1. **Round 1: Foundation and use case** - identity/current situation, chosen use case, goals, current responsibilities, what they want AI to help with, privacy boundaries.
+2. **Round 2: Depth and operating context** - active projects, workflows, people/organizations, constraints, decisions, repeated problems, source files, examples.
+3. **Round 3: Personalization and future usefulness** - communication style, advice preferences, writing voice, what AI gets wrong, what great help looks like, open loops, "wow-test" tasks.
+
+After each round:
+
+1. Summarize what you learned in a short bullet list.
+2. Identify what is still unclear.
+3. Generate the next round from the remaining gaps.
+
+If a user's use case needs more depth after three rounds, ask a fourth targeted round. Do not stop at three rounds if major context is still thin.
+
+Do not build the wiki immediately after the export unless the user explicitly says they want a shallow quickstart.
 
 Use `references/interview-map.md` to choose the next questions. Prioritize branches that create immediate usefulness:
 
@@ -225,7 +259,7 @@ Prefer useful prompts over generic questions. Examples:
 - "This looks like a decision, but I do not know the rationale. Why did you choose this path?"
 - "I see your resume, but not what you want next. What roles, clients, projects, or opportunities are you aiming for?"
 
-Ask in small batches. For non-technical users, use section labels such as "Projects", "Goals", "Preferences", and "People" so the interview feels easy to answer.
+Use section labels so the interview feels easy to answer. It is okay for one round to be long, but keep the wording plain and tell the user they can answer in a messy brain dump.
 
 ## Phase 6: Bootstrap the wiki
 

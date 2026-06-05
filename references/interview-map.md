@@ -6,8 +6,10 @@ Do not ask this as a giant form. Use it as an audit map:
 
 1. Collect existing context first.
 2. Identify which branches already have enough detail.
-3. Ask targeted follow-ups only for branches that are missing, vague, stale, contradictory, or important.
+3. Ask at least three rounds of deep interview questions, customized to the user's use case and the gaps in the source material.
 4. Confirm sensitive details before writing them into durable files.
+
+Exports are not enough by themselves. They are draft source material. The interview is what turns a generic export into a useful LLM Wiki.
 
 ## The Core Test
 
@@ -26,6 +28,63 @@ The first wiki is useful when a future agent can answer:
 If the answer to any of those is unclear, ask follow-up questions.
 
 Press Start should only run during first-time setup. After these questions are answered well enough and the first wiki is built, future sessions should use the LLM Wiki directly instead of re-running this interview.
+
+## Deep Interview Requirement
+
+Press Start must run at least three customized interview rounds before building the wiki unless the user explicitly requests a shallow quickstart.
+
+Each round should include about 25 questions.
+
+The user should be told:
+
+```text
+You can skip any question. If you do not know, say "I don't know." Messy answers are fine. The goal is not to sound polished; the goal is to give the wiki enough real context to help you later.
+```
+
+### Round 1: Foundation and Use Case
+
+Purpose: understand who the user is, what they need help with, and what the wiki is for.
+
+Customize questions around:
+
+- identity and current situation
+- primary use case
+- current goals
+- current responsibilities
+- what they want AI to help with first
+- current AI skill level
+- privacy boundaries
+
+### Round 2: Depth and Operating Context
+
+Purpose: understand the real workflows, projects, people, constraints, and repeated problems.
+
+Customize questions around:
+
+- active projects or responsibilities
+- day-to-day workflows
+- important people and organizations
+- decisions already made
+- repeated tasks and open loops
+- files, notes, documents, and sources
+- what is stale, unclear, or sensitive
+
+### Round 3: Personalization and Future Usefulness
+
+Purpose: make the wiki feel personal enough that future answers are clearly better than normal web chat.
+
+Customize questions around:
+
+- communication style
+- advice preferences
+- writing voice
+- taste and examples
+- what AI usually gets wrong
+- what good help feels like
+- what the agent should never assume
+- practical "wow-test" tasks the user wants to try
+
+After each round, summarize what was learned and generate the next round from remaining gaps. If important context is still thin after three rounds, ask a fourth targeted round.
 
 ## Use-Case Routing
 

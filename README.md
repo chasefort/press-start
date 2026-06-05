@@ -23,7 +23,7 @@ Press Start makes the first setup easy enough for a beginner:
 3. Set up the Karpathy-style LLM Wiki structure.
 4. Collect context from ChatGPT, Claude, Gemini, Perplexity, documents, notes, and project files.
 5. Confirm what is accurate, stale, private, or missing.
-6. Ask targeted questions based on the user's actual use case.
+6. Run at least three rounds of deep, customized interview questions based on the user's actual use case.
 7. Build the starter wiki.
 8. Offer to remove or disable itself once setup is complete.
 
@@ -37,7 +37,7 @@ Press Start makes the first setup easy enough for a beginner:
 - Tells users to review and correct AI exports before treating them as source material.
 - Helps users paste corrected messy context back into the setup chat.
 - Finds missing, stale, sensitive, or contradictory information.
-- Asks targeted follow-up questions instead of a generic form.
+- Asks at least three rounds of targeted interview questions instead of treating an export as enough.
 - Creates the initial wiki pages, index, and bootstrap log entry.
 - Offers to remove or disable itself after setup is complete.
 
@@ -64,6 +64,8 @@ The skill gives the user copy-paste prompts for the tools they already use, such
 The user pastes the results back into the setup chat or adds files to `raw/`.
 
 AI exports are treated as source material, not automatic truth. The user is asked to read them, correct mistakes, remove anything too private, and add missing context before the wiki is built.
+
+The export is only the starting point. Press Start then runs a deeper interview, usually three rounds of about 25 questions, customized to the person's use case and the missing context. Users can skip any question or say "I don't know."
 
 ### 2. Confirm
 
